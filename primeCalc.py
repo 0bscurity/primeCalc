@@ -1,10 +1,10 @@
-import tkinter as tk
-
-# -----------------------Command Line---------------------------------------
 
 
-def calc_prime():
-    num = int(input("Enter number to check if prime: "))
+# -----------------------PRIME NUMBER CALCULATOR---------------------------------------
+import gui
+
+
+def calc_prime(num):
     f = False
 
     for i in range(2, num):
@@ -30,24 +30,3 @@ def prime_array():
             primelist.append(number)
 
     print(primelist)
-
-
-# -------------------------------------------------------------------------
-
-
-def gui():
-    window = tk.Tk()
-
-    c_label = tk.Label(text="Enter number to determine if it is prime")
-    c_entry = tk.Entry(fg="white", bg="gray", width=20)
-    c_button = tk.Button(text="Calculate")
-
-    c_label.pack()
-    c_entry.pack()
-    c_button.pack()
-
-    test_num = c_entry.get()
-
-    window.mainloop()
-
-    return test_num
