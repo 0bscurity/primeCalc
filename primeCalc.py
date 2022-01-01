@@ -1,7 +1,4 @@
-
-
 # -----------------------PRIME NUMBER CALCULATOR---------------------------------------
-import gui
 
 
 def calc_prime(num):
@@ -18,15 +15,11 @@ def calc_prime(num):
         print(f"{num} is prime")
 
 
-def prime_array():
+def prime_array(test_num):
     primelist = []
 
-    for number in range(2, 101):
-        prime = True
-        for j in range(2, number):
-            if number % j == 0:
-                prime = False
-        if prime:
-            primelist.append(number)
+    for i in range(2, test_num + 1, 2):
+        if all(i % j != 0 for j in range(3, int(i**.5) + 1, 2)):
+            primelist.append(i)
 
     print(primelist)
